@@ -10,18 +10,13 @@ What's Here
 This sample includes:
 
 * README.md - this file
-* appspec.yml - this file is used by AWS CodeDeploy when deploying the web
-  application to EC2
-* buildspec.yml - this file is used by AWS CodeBuild to build the web
-  application
+
 * pom.xml - this file is the Maven Project Object Model for the web application
+
 * src/main - this directory contains your Java service source files
+
 * src/test - this directory contains your Java service unit test files
-* scripts/ - this directory contains scripts used by AWS CodeDeploy when
-  installing and deploying your application on the Amazon EC2 instance
-* template.yml - this file contains the description of AWS resources used by AWS
-  CloudFormation to deploy your infrastructure
-* template-configuration.json - this file contains the project ARN with placeholders used for tagging resources with the project ID
+
 
 Getting Started
 ---------------
