@@ -20,8 +20,8 @@ phases:
       - git status
       - git checkout branchb
       - git status
-      - git fetch branchb
-      - git pull branchb 
+      - git fetch 
+      - git pull  
       - git status
       - git merge brancha
       - git status
