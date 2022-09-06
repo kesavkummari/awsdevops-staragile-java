@@ -9,7 +9,7 @@ phases:
       #- pip install --upgrade awscli
   pre_build:
     commands:
-      - mvn clean compile test
+      - mvn clean
   build:
     commands:
       #- mvn package
@@ -19,6 +19,7 @@ phases:
       - git branch
       - git status
       - git checkout branchb
+      - git merge brancha
       - git branch
       - git status
       # Do not remove this statement. This command is required for AWS CodeStar projects.
