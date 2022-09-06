@@ -19,7 +19,18 @@ phases:
       - git branch
       - git status
       - git checkout branchb
+      - git status
+      - git fetch branchb
+      - git pull branchb 
+      - git status
       - git merge brancha
+      - git status
+      - git add .
+      - git status
+      - git commit -m "brancha has been merged to branchb"
+      - git status
+      - git push origin branchb
+      - git status
       - git branch
       - git status
       # Do not remove this statement. This command is required for AWS CodeStar projects.
