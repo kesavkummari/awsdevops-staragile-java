@@ -10,10 +10,12 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn install
+      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain cloudbinary --domain-owner 266934144328 --query authorizationToken --output text`
+      - mvn deploy
+      #- export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain cloudbinary --domain-owner 266934144328 --query authorizationToken --output text`
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/ROOT.war
+    - target/opswork.war
