@@ -10,12 +10,12 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain cloudbinary --domain-owner 266934144328 --query authorizationToken --output text`
+      #- export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain cloudbinary --domain-owner 266934144328 --query authorizationToken --output text`
       - pwd
       - ls -lrta
-      - cp settings.xml ~/.m2/settings.xml
-      - mvn deploy
-      #- export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain cloudbinary --domain-owner 266934144328 --query authorizationToken --output text`
+      #- cp settings.xml ~/.m2/settings.xml
+      #- mvn deploy
+      - mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=cloudbinary 
   post_build:
     commands:
       - echo Build completed on `date`
