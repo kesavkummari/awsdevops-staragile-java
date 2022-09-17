@@ -49,7 +49,7 @@ pipeline {
                 echo 'Install....'
                 sh 'mvn install'
             }
-        // }
+        }
         //  stage('Deploy') {
         //     steps {
         //         echo 'Deploy....'
