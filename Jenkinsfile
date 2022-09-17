@@ -5,7 +5,7 @@ pipeline {
         stage('SCA') {
             steps {
                 echo 'Code Quality..'
-                sh 'mvn verify sonar:sonar'
+                sh 'mvn sonar:sonar'
             }
         }
         stage('Clean') {
