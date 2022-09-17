@@ -5,7 +5,7 @@ pipeline {
         stage('SCA') {
             steps {
                 echo 'Code Quality..'
-                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=opsworkjava'
+                sh 'mvn verify sonar:sonar'
             }
         }
         stage('Clean') {
